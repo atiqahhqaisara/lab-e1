@@ -374,3 +374,61 @@ header {
     height: auto;
     border-radius: 1rem;
 }
+
+/* =========================
+   CARD GRID (INDEX PAGE)
+   ========================= */
+
+.page-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-md); /* spacing between cards */
+}
+
+/* Make heading span full width */
+.page-cards h2 {
+    grid-column: span 2;
+}
+
+/* Card styling (equal height + hover effect) */
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    /* ensures equal height layout */
+
+    background-color: var(--color-surface);
+    padding: var(--space-md);
+    border-radius: 1rem;
+    border: 0.1rem solid var(--color-grey-300);
+
+    transition: transform 0.2s;
+}
+
+/* Lift effect */
+.card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   SIDEBAR LAYOUT (SKILLS / ABOUT)
+   ========================= */
+
+.page-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px; /* main + sidebar */
+    gap: var(--space-lg);
+}
+
+/* Main content */
+.main-content {
+    background-color: var(--color-surface);
+    padding: var(--space-md);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--color-grey-100);
+    padding: var(--space-md);
+    border-radius: 1rem;
+}
