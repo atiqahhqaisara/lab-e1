@@ -439,3 +439,107 @@ header {
     padding: var(--space-md);
     border-radius: 1rem;
 }
+
+/* =========================
+   FORM STYLING
+   ========================= */
+
+/* Inputs, textarea, select */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 0.1rem solid var(--color-grey-300);
+    border-radius: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    margin-bottom: var(--space-md);
+}
+
+/* Focus state (ACCESSIBILITY MARKS) */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.3rem var(--color-accent);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+   ========================= */
+
+button {
+    background-color: var(--color-accent-2);
+    color: var(--color-surface);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: var(--color-accent);
+}
+
+/* Click effect */
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================
+   PSEUDO ELEMENTS
+   ========================= */
+
+/* 1. Decorative quote */
+blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-right: var(--space-sm);
+}
+
+/* 2. Section heading left bar */
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 0.5rem;
+    height: 1.5rem;
+    background-color: var(--color-accent-2);
+    margin-right: var(--space-sm);
+}
+
+
+/* =========================
+   TABLE STRIPING
+   ========================= */
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-grey-100);
+}
+
+
+/* =========================
+   LIST POLISH
+   ========================= */
+
+/* Remove top border from first item */
+ul li:first-child {
+    border-top: none;
+}
+
+/* Remove bottom border from last item */
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Optional: add borders for effect */
+ul li {
+    border-top: 0.1rem solid var(--color-grey-300);
+    padding: var(--space-sm);
+}
