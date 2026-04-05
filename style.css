@@ -1,0 +1,123 @@
+/* =========================
+   GOOGLE FONT IMPORT
+   ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+
+/* =========================
+   CSS RESET
+   ========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    font-size: 1.6rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+}
+
+
+/* =========================
+   DESIGN TOKENS (:root)
+   ========================= */
+:root {
+    /* Primary Colors */
+    --color-primary: #1a1a2e;
+    --color-secondary: #16213e;
+
+    /* Accent Colors */
+    --color-accent: #e8d5b7;
+    --color-accent-2: #fca311;
+
+    /* Neutral Greys */
+    --color-grey-100: #f5f5f5;
+    --color-grey-300: #cccccc;
+    --color-grey-700: #555555;
+
+    /* Text + Surface */
+    --color-text: #1a1a1a;
+    --color-muted: #666666;
+    --color-surface: #ffffff;
+
+    /* Fonts */
+    --font-body: 'Poppins', Arial, sans-serif;
+    --font-heading: 'Playfair Display', serif;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+}
+
+
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+p {
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION (optional)
+   ========================= */
+nav {
+    background-color: var(--color-primary);
+    padding: var(--space-md);
+}
+
+nav a {
+    color: var(--color-surface);
+    text-decoration: none;
+    margin-right: var(--space-md);
+}
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+
+/* =========================
+   SECTION STYLING
+   ========================= */
+section {
+    padding: var(--space-lg);
+}
+
+figure {
+    margin: var(--space-md) 0;
+}
+
+figcaption {
+    font-size: 1.4rem;
+    color: var(--color-muted);
+}
+
+
+/* =========================
+   BUTTON (optional reuse)
+   ========================= */
+button {
+    background-color: var(--color-accent-2);
+    color: var(--color-surface);
+    border: none;
+    padding: var(--space-sm) var(--space-md);
+    cursor: pointer;
+}
