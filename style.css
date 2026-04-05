@@ -293,3 +293,84 @@ input:focus, textarea:focus {
     outline: none;
     box-shadow: 0 0 0 0.3rem var(--color-accent);
 }
+
+/* =========================
+   NAVIGATION (FLEXBOX)
+   ========================= */
+
+nav {
+    display: flex;
+    justify-content: space-between; /* logo left, links right */
+    align-items: center;
+    padding: var(--space-md);
+    background-color: var(--color-primary);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* stays above other content */
+}
+
+/* Logo / Site Name */
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-surface);
+}
+
+/* Nav links container */
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    gap: var(--space-sm);
+}
+
+/* Nav links */
+.nav-links a {
+    color: var(--color-surface);
+    text-decoration: none;
+    padding: var(--space-sm);
+    border-radius: 0.5rem;
+
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Active page */
+.nav-links a.active {
+    border-bottom: 0.3rem solid var(--color-accent-2);
+}
+
+
+/* =========================
+   HERO HEADER (FLEXBOX)
+   ========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* vertically center */
+    padding: var(--space-lg);
+    gap: var(--space-lg);
+}
+
+/* Text side */
+.header-text {
+    flex: 1;
+}
+
+/* Image side */
+.header-image {
+    flex: 1;
+    text-align: right;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
